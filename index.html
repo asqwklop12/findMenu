@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/user.js" defer></script>
+    <title>Random Menu</title>
+    <link rel="stylesheet" href="./src/css/user.css">
+
+</head>
+<body>
+<div id="app">
+    <h1>Today's Random Menu:</h1>
+    <div class="menu-container">
+        <transition name="fade">
+            <p v-if="!loading && menu" key="menu" class="menu-text">{{ menu }}</p>
+        </transition>
+        <transition name="fade">
+            <p v-if="loading" class="menu-text">Loading...</p>
+        </transition>
+    </div>
+    <button @click="generateMenu">Get Random Menu</button>
+</div>
+
+
+
+</body>
+</html>
