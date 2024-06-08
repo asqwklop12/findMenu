@@ -1,0 +1,66 @@
+/* 스타일 추가 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-group .add-icon {
+  width: 30px;
+  height: 30px;
+  background-color: green; /* 그린 색상으로 강조 */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input-group .add-icon::before {
+  content: '+';
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 10px; /* 각 항목 사이의 간격을 늘립니다. */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* 호버 효과를 위한 transition 추가 */
+}
+
+li:hover {
+  transform: translateY(-3px); /* 호버 시 약간 위로 이동하는 효과 추가 */
+}

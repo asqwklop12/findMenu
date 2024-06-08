@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./src/css/admin.css">
+</head>
+<body>
+<div id="app">
+    <div class="input-group">
+        <input v-model="newMenu" @keyup.enter="addMenu" type="text" placeholder="Add new menu">
+        <div class="add-icon" @click="addMenu"></div>
+    </div>
+    <ul>
+        <li v-for="(menu, index) in menus" :key="menu.id" @click="confirmDelete(index)">
+            {{ menu.name }}
+        </li>
+    </ul>
+</div>
+<script src="./src/js/admin.js" defer></script>
+</body>
+</html>
